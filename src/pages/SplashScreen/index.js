@@ -13,7 +13,7 @@ const SplashScreen = () => {
         }}>
             <Logo width={200} height={200} fill="#000" style={{ marginBottom: 16 }} />
             <View style={{height: 38}}/>
-            <Text style={{fontSize: 32, color: '#020202'}}>FoodMarket</Text>
+            <Text style={{fontSize: 32, color: '#020202', fontFamily:'Poppins-Medium'}}>FoodMarket</Text>
         </View>
     );
 };
