@@ -1,13 +1,11 @@
-import 'react-native-gesture-handler'
 import { NavigationContainer } from '@react-navigation/native';
-import { SafeAreaView, StatusBar, Text } from 'react-native';
-import { SignIn, SplashScreen } from './pages';
+import 'react-native-gesture-handler';
+import Router from './router';
 
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <SplashScreen/> */}
-      <SignIn />
+      <Router />
     </NavigationContainer>
   );
 };
