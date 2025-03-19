@@ -1,2 +1,2 @@
 export * from './molecules';
-export * from './atom';
+export * from './atoms';
