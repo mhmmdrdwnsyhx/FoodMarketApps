@@ -16,11 +16,11 @@ const SignUp = ({navigation}) => {
         </View>        
         <TextInput label={"Full Name"} placeholder={"Type your full name"}/>
         <Gap height={16}/>
-        <TextInput label={"Email Address"} placeholder="Type your email address" secureTextEntry={true}/>
+        <TextInput label={"Email Address"} placeholder="Type your email address"/>
         <Gap height={16}/>
         <TextInput label={"Password"} placeholder="Type your password" secureTextEntry={true}/>
         <Gap height={24}/>
-        <Button text={"Continue"}/>
+        <Button text={"Continue"} onPress={() => navigation.navigate('SignUpAddress')}/>
       </View>
     </View>
   )
