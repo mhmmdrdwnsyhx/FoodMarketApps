@@ -13,9 +13,9 @@ const SignUpAddress = ({navigation}) => {
         <Gap height={16}/>
         <TextInput label={"House No."} placeholder="Type your house number"/>
         <Gap height={16}/>
-        <Select />
+        <Select label="City" />
         <Gap height={24}/>
-        <Button text={"Sign Up Now"}/>
+        <Button text={"Sign Up Now"} onPress={() => navigation.replace('SuccessSignUp') }/>
       </View>
     </View>
   );
