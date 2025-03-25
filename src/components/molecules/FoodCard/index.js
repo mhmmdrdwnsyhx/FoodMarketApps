@@ -34,10 +34,11 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 7 },
     shadowOpacity: 0.5,
     shadowRadius: 10,
-    elevatioe: 14,
+    elevation: 14,
     width: 200,
     overflow: 'hidden',
     marginRight: 24,
+    marginBottom: 24,
   },
   text: {
     fontSize: 16,
