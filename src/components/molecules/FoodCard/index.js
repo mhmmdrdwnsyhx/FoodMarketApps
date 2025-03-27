@@ -2,19 +2,19 @@ import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { IcStarOff, IcStarOn } from '../../../assets'
 
-const FoodCard = ({image}) => {
+const FoodCard = ({ image }) => {
   return (
     <View style={styles.container}>
-      <Image source={image} style={styles.image}/>
+      <Image source={image} style={styles.image} />
       <View style={styles.content}>
         <Text style={styles.text}>Food Name</Text>
         <View style={styles.ratingContainer}>
           <View style={styles.starContainer}>
-            <IcStarOn/>
-            <IcStarOn/>
-            <IcStarOn/>
-            <IcStarOn/>
-            <IcStarOff/>
+            <IcStarOn />
+            <IcStarOn />
+            <IcStarOn />
+            <IcStarOn />
+            <IcStarOff />
           </View>
           <Text>4.5</Text>
         </View>
@@ -38,7 +38,6 @@ const styles = StyleSheet.create({
     width: 200,
     overflow: 'hidden',
     marginRight: 24,
-    marginBottom: 24,
   },
   text: {
     fontSize: 16,
@@ -61,5 +60,4 @@ const styles = StyleSheet.create({
     height: 140,
     resizeMode: 'cover',
   },
-
 })
