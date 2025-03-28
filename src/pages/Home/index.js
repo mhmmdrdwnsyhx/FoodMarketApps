@@ -5,6 +5,7 @@ import { FoodCard, Gap, HomeProfile, HomeTabSection } from '../../components'
 
 const Home = () => {
   return (
+    // <ScrollView>
     <View style={styles.page}>
       <HomeProfile />
       <View>
@@ -23,6 +24,7 @@ const Home = () => {
         <HomeTabSection />
       </View>
     </View>
+    // </ScrollView>
   )
 }
 
