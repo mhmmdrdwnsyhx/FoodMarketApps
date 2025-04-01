@@ -26,7 +26,6 @@ export default Rating;
 const styles = StyleSheet.create({
     ratingContainer: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
         alignItems: 'center',
     },
     starContainer: {
