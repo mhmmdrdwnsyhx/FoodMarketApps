@@ -1,17 +1,19 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Rating from '../Rating';
 
-const ItemListFood = ({ image, title, price, rating }) => {
+const ItemListFood = ({ image, title, price, rating, onPress }) => {
     return (
-        <View style={styles.container}>
-            <Image source={image} style={styles.image} />
-            <View style={{ flex: 1 }}>
-                <Text style={styles.title}>{title}</Text>
-                <Text style={styles.price}>{price}</Text>
+        <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
+            <View style={styles.container}>
+                <Image source={image} style={styles.image} />
+                <View style={{ flex: 1 }}>
+                    <Text style={styles.title}>{title}</Text>
+                    <Text style={styles.price}>{price}</Text>
+                </View>
+                <Rating rate={rating} maxStars={5} />
             </View>
-            <Rating rate={rating} maxStars={5} />
-        </View>
+        </TouchableOpacity>
     );
 };
 
