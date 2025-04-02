@@ -1,86 +1,44 @@
 import React from 'react';
-import { Dimensions, Image, StyleSheet, Text, View } from 'react-native';
+import { Dimensions, ScrollView, StyleSheet, Text } from 'react-native';
 import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
-import { FoodDummy1, FoodDummy3, FoodDummy4, FoodDummy5 } from '../../../assets';
-import Rating from '../Rating';
+import { FoodDummy1, FoodDummy2, FoodDummy3, FoodDummy4, FoodDummy5 } from '../../../assets';
+import ItemListFood from '../ItemListFood';
+import { useNavigation } from '@react-navigation/native';
 
 
 const NewTaste = () => {
+    const navigation = useNavigation();
     return (
-        <View style={{ paddingHorizontal: 24, paddingVertical: 16 }} >
-            {/* First Item */}
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                <Image source={FoodDummy3} style={styles.image} />
-                <View style={{ flex: 1, marginLeft: 12 }}>
-                    <Text style={styles.title}>Soup Bumil</Text>
-                    <Text style={styles.price}>IDR 289.000</Text>
-                </View>
-                <Rating rate={4.1} maxStars={5} />
-            </View>
-
-            {/* Second Item */}
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Image source={FoodDummy1} style={styles.image} />
-                <View style={{ flex: 1, marginLeft: 12 }}>
-                    <Text style={styles.title}>Cherry Healthy</Text>
-                    <Text style={styles.price}>IDR 122.000</Text>
-                </View>
-                <Rating rate={3.9} maxStars={5} />
-            </View>
-
-        </View>
+        <ScrollView style={{ paddingTop: 8 }}>
+            <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy2} title="Avocado Salad" price="IDR 122.000" rating={3.9} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy5} title="Rainbow Ice Cream" price="IDR 122.000" rating={2.7} onPress={() => navigation.navigate('FoodDetail')} />
+        </ScrollView>
     );
 };
 
 const Popular = () => {
+    const navigation = useNavigation();
     return (
-        <View style={{ paddingHorizontal: 24, paddingVertical: 16 }} >
-            {/* First Item */}
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                <Image source={FoodDummy3} style={styles.image} />
-                <View style={{ flex: 1, marginLeft: 12 }}>
-                    <Text style={styles.title}>Soup Bumil</Text>
-                    <Text style={styles.price}>IDR 289.000</Text>
-                </View>
-                <Rating rate={4.1} maxStars={5} />
-            </View>
-
-            {/* Second Item */}
-            <View style={{ flexDirection: 'row', paddingBottom: 16, justifyContent: 'space-between', alignItems: 'center' }}>
-                <Image source={FoodDummy1} style={styles.image} />
-                <View style={{ flex: 1, marginLeft: 12 }}>
-                    <Text style={styles.title}>Chicken</Text>
-                    <Text style={styles.price}>IDR 459.000</Text>
-                </View>
-                <Rating rate={3.8} maxStars={5} />
-            </View>
-
-            {/* Second Item */}
-            <View style={{ flexDirection: 'row', padddingVertical: 16, justifyContent: 'space-between', alignItems: 'center' }}>
-                <Image source={FoodDummy5} style={styles.image} />
-                <View style={{ flex: 1, marginLeft: 12 }}>
-                    <Text style={styles.title}>Ice Cream</Text>
-                    <Text style={styles.price}>IDR 12.000</Text>
-                </View>
-                <Rating rate={5} maxStars={5} />
-            </View>
-        </View>
+        <ScrollView style={{ paddingTop: 8 }}>
+            <ItemListFood image={FoodDummy2} title="Avocado Salad" price="IDR 122.000" rating={3.9} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
+        </ScrollView>
     );
 }
 
 const Recommended = () => {
+    const navigation = useNavigation();
     return (
-        <View style={{ paddingHorizontal: 24, paddingVertical: 16 }} >
-            {/* First Item */}
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                <Image source={FoodDummy4} style={styles.image} />
-                <View style={{ flex: 1, marginLeft: 12 }}>
-                    <Text style={styles.title}>Butterscotch creme latte</Text>
-                    <Text style={styles.price}>IDR 24.000</Text>
-                </View>
-                <Rating rate={5} maxStars={5} />
-            </View>
-        </View>
+        <ScrollView style={{ paddingTop: 8 }}>
+            <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
+        </ScrollView>
     );
 }
 
@@ -95,7 +53,13 @@ const renderTabBar = (props) => (
             backgroundColor: '#020202',
             height: 3,
         }}
-        style={{ backgroundColor: 'white' }}
+        style={{
+            backgroundColor: 'white',
+            elevation: 0,
+            shadowColor: 'transparent',
+            borderBottomWidth: 1,
+            borderBottomColor: '#F2F2F2',
+        }}
         tabStyle={{ width: 'auto' }}
         renderLabel={({ route, focused }) => (
             <Text style={{}}>
@@ -126,6 +90,7 @@ const HomeTabSection = () => {
             renderScene={renderScene}
             onIndexChange={setIndex}
             initialLayout={initialLayout}
+            style={{ backgroundColor: 'white' }}
         />
     )
 }
@@ -133,20 +98,5 @@ const HomeTabSection = () => {
 export default HomeTabSection
 
 const styles = StyleSheet.create({
-    image: {
-        width: 60,
-        height: 60,
-        borderRadius: 8,
-        resizeMode: 'cover',
-    },
-    title: {
-        fontSize: 16,
-        fontFamily: 'Poppins-Regular',
-        color: '#020202',
-    },
-    price: {
-        fontSize: 13,
-        fontFamily: 'Poppins-Regular',
-        color: '#8D92A3',
-    },
+
 })
