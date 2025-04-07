@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Rating from '../Rating';
 
-const ItemListFood = ({ image, title, price, rating, onPress }) => {
+const ItemListFood = ({ image, title, price, items, rating, onPress }) => {
     return (
         <TouchableOpacity activeOpacity={0.7} onPress={onPress}>
             <View style={styles.container}>
@@ -11,7 +11,8 @@ const ItemListFood = ({ image, title, price, rating, onPress }) => {
                     <Text style={styles.title}>{title}</Text>
                     <Text style={styles.price}>{price}</Text>
                 </View>
-                <Rating rate={rating} maxStars={5} />
+                {items && !rating && <Text style={styles.items}>{items} items</Text>}
+                {rating && !items && <Rating rate={rating} maxStars={5} />}
             </View>
         </TouchableOpacity>
     );
@@ -23,7 +24,6 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         backgroundColor: 'white',
-        paddingHorizontal: 24,
         paddingVertical: 8,
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -42,6 +42,11 @@ const styles = StyleSheet.create({
         color: '#020202',
     },
     price: {
+        fontSize: 13,
+        fontFamily: 'Poppins-Regular',
+        color: '#8D92A3',
+    },
+    items: {
         fontSize: 13,
         fontFamily: 'Poppins-Regular',
         color: '#8D92A3',
