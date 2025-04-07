@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 const NewTaste = () => {
     const navigation = useNavigation();
     return (
-        <ScrollView style={{ paddingTop: 8 }}>
+        <ScrollView style={{ paddingTop: 8, paddingHorizontal: 24 }}>
             <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
             <ItemListFood image={FoodDummy2} title="Avocado Salad" price="IDR 122.000" rating={3.9} onPress={() => navigation.navigate('FoodDetail')} />
             <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
@@ -22,7 +22,7 @@ const NewTaste = () => {
 const Popular = () => {
     const navigation = useNavigation();
     return (
-        <ScrollView style={{ paddingTop: 8 }}>
+        <ScrollView style={{ paddingTop: 8, paddingHorizontal: 24 }}>
             <ItemListFood image={FoodDummy2} title="Avocado Salad" price="IDR 122.000" rating={3.9} onPress={() => navigation.navigate('FoodDetail')} />
             <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
             <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
@@ -34,7 +34,7 @@ const Popular = () => {
 const Recommended = () => {
     const navigation = useNavigation();
     return (
-        <ScrollView style={{ paddingTop: 8 }}>
+        <ScrollView style={{ paddingTop: 8, paddingHorizontal: 24 }}>
             <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
             <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
             <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
