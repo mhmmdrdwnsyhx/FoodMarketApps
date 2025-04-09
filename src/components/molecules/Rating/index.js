@@ -30,5 +30,6 @@ const styles = StyleSheet.create({
     },
     starContainer: {
         flexDirection: 'row',
+        marginRight: 4,
     },
 });
