@@ -16,7 +16,7 @@ const inProgress = () => {
                 title="Avocado Salad"
                 price="122.000"
                 items={3}
-                onPress={() => navigation.navigate('FoodDetail')}
+                onPress={() => navigation.navigate('OrderDetail')}
             />
             <ItemListFood
                 image={FoodDummy4}
@@ -24,7 +24,7 @@ const inProgress = () => {
                 title="Butterscotch Creme Latte"
                 price="45.000"
                 items={10}
-                onPress={() => navigation.navigate('FoodDetail')}
+                onPress={() => navigation.navigate('OrderDetail')}
             />
             <ItemListFood
                 image={FoodDummy5}
@@ -32,7 +32,7 @@ const inProgress = () => {
                 title="Rainbow Ice Cream"
                 price="450.250"
                 items={2}
-                onPress={() => navigation.navigate('FoodDetail')}
+                onPress={() => navigation.navigate('OrderDetail')}
             />
         </ScrollView>
     );
@@ -48,7 +48,7 @@ const pastOrders = () => {
                 title="Chicken Soup"
                 price="289.000"
                 items={1}
-                onPress={() => navigation.navigate('FoodDetail')}
+                onPress={() => navigation.navigate('OrderDetail')}
                 date={'Jun 12, 14:00'}
             />
             <ItemListFood
@@ -57,7 +57,7 @@ const pastOrders = () => {
                 title="Avocado Salad"
                 price="6.000.000"
                 items={1}
-                onPress={() => navigation.navigate('FoodDetail')}
+                onPress={() => navigation.navigate('OrderDetail')}
                 date={'Jun 12, 14:00'}
                 status={'Cancelled'}
             />
