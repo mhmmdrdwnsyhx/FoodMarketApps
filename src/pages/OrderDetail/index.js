@@ -4,7 +4,7 @@ import { FoodDummy1 } from '../../assets'
 import { Button, Header, ItemListFood, ItemValue } from '../../components'
 import { ScrollView } from 'react-native-gesture-handler'
 
-const OrderDetail = () => {
+const OrderDetail = ({ navigation }) => {
     return (
         <ScrollView>
 
@@ -39,7 +39,7 @@ const OrderDetail = () => {
                     <ItemValue label={'#FM209391'} value={'Paid'} valueColor='#1ABC9C' />
                 </View>
                 <View style={styles.button}>
-                    <Button text="Cancel My Order" color="#FF5C60" textColor='white' onPress={() => navigation.replace('')} />
+                    <Button text="Cancel My Order" color="#FF5C60" textColor='white' onPress={() => ('')} />
                 </View>
             </View>
         </ScrollView>
