@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { EmptyOrder, Gap, Header, OrderTabSection } from '../../components'
 
 const Order = () => {

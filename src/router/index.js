@@ -3,6 +3,7 @@ import { FoodDetail, Home, Order, Profile, SignIn, SignUp, SignUpAddress, Splash
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { BottomNavigator } from "../components";
+import OrderDetail from "../pages/OrderDetail";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -30,6 +31,7 @@ const Router = () => {
             <Stack.Screen name="FoodDetail" component={FoodDetail} options={{ headerShown: false }} />
             <Stack.Screen name="OrderSummary" component={OrderSummary} options={{ headerShown: false }} />
             <Stack.Screen name="SuccessOrder" component={SuccessOrder} options={{ headerShown: false }} />
+            <Stack.Screen name="OrderDetail" component={OrderDetail} options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 };
