@@ -18,7 +18,6 @@ const MainApp = () => {
     )
 };
 
-
 const Router = () => {
     return (
         <Stack.Navigator>

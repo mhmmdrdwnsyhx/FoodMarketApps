@@ -6,7 +6,7 @@ import React from 'react'
 // *Make this atoms based on Figma Design*
 // ***************************************
 
-const Select = ({label}) => {
+const Select = ({ label }) => {
   return (
     <View>
       <Text style={styles.label}>{label}</Text>
@@ -14,11 +14,11 @@ const Select = ({label}) => {
         <Picker
         // selectedValue={this.state.lengague}
         // onValueChange={{itemValue, itemIndex} =>
-            //     this.setState({lengague: itemValue})
+        //     this.setState({lengague: itemValue})
         // }
         >
-          <Picker.Item label="Select your city" value=""/>
-          <Picker.Item label="Indonesia" value=""/>
+          <Picker.Item label="Select your city" value="" />
+          <Picker.Item label="Indonesia" value="" />
         </Picker>
       </View>
     </View>
@@ -28,12 +28,12 @@ const Select = ({label}) => {
 export default Select
 
 const styles = StyleSheet.create({
-  label: {fontSize: 16, fontFamily: 'Poppins-Regular', color: '#020202'},
+  label: { fontSize: 16, fontFamily: 'Poppins-Regular', color: '#020202' },
   input: {
-    borderWidth: 1, 
-    borderColor: '#020202', 
-    borderRadius: 8, 
-    paddingHorizontal: 2, 
+    borderWidth: 1,
+    borderColor: '#020202',
+    borderRadius: 8,
+    paddingHorizontal: 2,
     paddingVertical: 0
   },
 })
