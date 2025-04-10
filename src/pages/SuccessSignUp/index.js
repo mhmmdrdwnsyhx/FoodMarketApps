@@ -3,18 +3,18 @@ import { StyleSheet, Text, View } from 'react-native'
 import { IlSuccessSignUp } from '../../assets'
 import { Button, Gap } from '../../components'
 
-const SuccessSignUp = ({navigation}) => {
+const SuccessSignUp = ({ navigation }) => {
   return (
     <View style={styles.page}>
-      <IlSuccessSignUp/>
-      <Gap height={30}/>
+      <IlSuccessSignUp />
+      <Gap height={30} />
       <Text style={styles.title}>Yeay! Completed</Text>
-      <Gap height={6}/>
+      <Gap height={6} />
       <Text style={styles.label}>Now you are able to order</Text>
       <Text style={styles.label}>some foods as a self-reward</Text>
-      <Gap height={30}/>
+      <Gap height={30} />
       <View style={styles.buttonContainer}>
-        <Button text={"Find foods"} onPress={() => navigation.replace('MainApp')}/>
+        <Button text={"Find foods"} onPress={() => navigation.replace('MainApp')} />
       </View>
     </View>
   )
@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#fff',
   },
   title: {
     fontSize: 20,

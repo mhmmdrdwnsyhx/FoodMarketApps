@@ -10,11 +10,46 @@ const NewTaste = () => {
     const navigation = useNavigation();
     return (
         <ScrollView style={{ paddingTop: 8, paddingHorizontal: 24 }}>
-            <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy2} title="Avocado Salad" price="IDR 122.000" rating={3.9} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy5} title="Rainbow Ice Cream" price="IDR 122.000" rating={2.7} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood
+                image={FoodDummy1}
+                type="product"
+                title="Cherry Healthy"
+                price="122.000"
+                rating={4.7}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy2}
+                type="product"
+                title="Avocado Salad"
+                price="122.000"
+                rating={3.9}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy3}
+                type="product"
+                title="Chicken Soup"
+                price="122.000"
+                rating={4.1}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy4}
+                type="product"
+                title="Butterscotch Creme Latte"
+                price="122.000"
+                rating={5}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy5}
+                type="product"
+                title="Rainbow Ice Cream"
+                price="122.000"
+                rating={2.7}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
         </ScrollView>
     );
 };
@@ -23,24 +58,73 @@ const Popular = () => {
     const navigation = useNavigation();
     return (
         <ScrollView style={{ paddingTop: 8, paddingHorizontal: 24 }}>
-            <ItemListFood image={FoodDummy2} title="Avocado Salad" price="IDR 122.000" rating={3.9} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood
+                image={FoodDummy2}
+                type="product"
+                title="Avocado Salad"
+                price="122.000"
+                rating={3.9}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy4}
+                type="product"
+                title="Butterscotch Creme Latte"
+                price="122.000"
+                rating={5}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy1}
+                type="product"
+                title="Cherry Healthy"
+                price="122.000"
+                rating={4.7}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy3}
+                type="product"
+                title="Chicken Soup"
+                price="122.000"
+                rating={4.1}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
         </ScrollView>
     );
-}
+};
 
 const Recommended = () => {
     const navigation = useNavigation();
     return (
         <ScrollView style={{ paddingTop: 8, paddingHorizontal: 24 }}>
-            <ItemListFood image={FoodDummy4} title="Butterscotch Creme Latte" price="IDR 122.000" rating={5} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy1} title="Cherry Healthy" price="IDR 122.000" rating={4.7} onPress={() => navigation.navigate('FoodDetail')} />
-            <ItemListFood image={FoodDummy3} title="Chicken Soup" price="IDR 122.000" rating={4.1} onPress={() => navigation.navigate('FoodDetail')} />
+            <ItemListFood
+                image={FoodDummy4}
+                type="product"
+                title="Butterscotch Creme Latte"
+                price="122.000"
+                rating={5}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy1}
+                type="product"
+                title="Cherry Healthy"
+                price="122.000"
+                rating={4.7}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
+            <ItemListFood
+                image={FoodDummy3}
+                type="product"
+                title="Chicken Soup"
+                price="122.000"
+                rating={4.1}
+                onPress={() => navigation.navigate('FoodDetail')}
+            />
         </ScrollView>
     );
-}
+};
 
 const initialLayout = { width: Dimensions.get('window').width };
 

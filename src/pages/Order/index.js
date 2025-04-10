@@ -1,21 +1,20 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
-import { IlOrder } from '../../assets'
-import { Button, Gap } from '../../components'
+import React, { useState } from 'react'
+import { StyleSheet, View, Text } from 'react-native'
+import { EmptyOrder, Gap, Header, OrderTabSection } from '../../components'
 
-const Order = ({navigation}) => {
+const Order = () => {
+  const [isEmpty] = useState(false)
   return (
     <View style={styles.page}>
-      <IlOrder/>
-      <Gap height={30}/>
-      <Text style={styles.title}>Ouch! Hungry</Text>
-      <Gap height={6}/>
-      <Text style={styles.label}>Seems like you have not</Text>
-      <Text style={styles.label}>ordered any food yet</Text>
-      <Gap height={30}/>
-      <View style={styles.buttonContainer}>
-        <Button text={"Find foods"} onPress={() => ('')}/>
-      </View>
+      {isEmpty ? <EmptyOrder /> : (
+        <View style={styles.content}>
+          <Header title="Your Orders" subTitle={'Wait for the best meal'} />
+          <Gap height={24} />
+          <View style={styles.tabContainer}>
+            <OrderTabSection />
+          </View>
+        </View>
+      )}
     </View>
   )
 }
@@ -25,21 +24,11 @@ export default Order
 const styles = StyleSheet.create({
   page: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontFamily: 'Poppins-Regular',
-    color: '#020202'
+  content: {
+    flex: 1,
   },
-  label: {
-    fontSize: 14,
-    fontFamily: 'Poppins-Light',
-    color: '#8D92A3'
-  },
-  buttonContainer: {
-    width: '100%',
-    paddingHorizontal: 80,
+  tabContainer: {
+    flex: 1,
   },
 })

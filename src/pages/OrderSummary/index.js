@@ -9,7 +9,7 @@ const OrderSummary = ({ navigation }) => {
             <Header title={"Payment"} subTitle={"You deserve better meal"} onBack={() => { }} />
             <View style={styles.content}>
                 <Text style={styles.label}>Item Ordered</Text>
-                <ItemListFood image={FoodDummy1} items={14} price={"IDR 122.000"} title="Cherry Healthy" />
+                <ItemListFood image={FoodDummy1} type={"order-summary"} items={14} price={"IDR 122.000"} title="Cherry Healthy" />
                 <Text style={styles.label}>Details Transaction</Text>
                 <ItemValue label={'Cherry Healthy'} value={'IDR 122.000'} />
                 <ItemValue label={'Driver'} value={'IDR 20.000'} />
